@@ -1,24 +1,27 @@
 # Diabetes Prediction Analysis
 
-Exploratory data analysis and machine learning prediction on the Pima Indians Diabetes Dataset.
+Exploratory data analysis, statistical testing, and machine learning prediction on the Pima Indians Diabetes Dataset.
 
 ## Dataset
 - 768 patients, 9 features
 - Source: Kaggle - Pima Indians Diabetes Dataset
 - Target variable: Diabetes diagnosis (1 = Yes, 0 = No)
+- 34.9% of patients diagnosed with diabetes
 
 ## Analysis
 
 ### Key Findings
-- Glucose is the strongest predictor of diabetes (correlation: 0.47)
-- Diabetic patients have significantly higher BMI (median ~35 vs ~30)
-- Diabetic patients tend to be older (median age ~36 vs ~27)
-- Higher number of pregnancies is associated with increased diabetes risk
+- Glucose is the strongest predictor of diabetes (correlation: 0.47, p < 0.0001)
+- BMI and Age are also highly significant (p < 0.0001)
+- BloodPressure was the only non-significant feature (p = 0.0715)
+- PCA explains 49.5% of variance with partial separation between groups along PC1
 
 ### Visualizations
 - Glucose distribution by diabetes outcome
 - BMI and age comparison using box plots
 - Correlation heatmap of all features
+- Statistical significance plot (-log10 p-values)
+- PCA of clinical features
 
 ### Machine Learning Model
 - Algorithm: Logistic Regression
@@ -27,10 +30,9 @@ Exploratory data analysis and machine learning prediction on the Pima Indians Di
 
 ## Tools
 - Python
-- pandas
-- matplotlib
-- seaborn
-- scikit-learn
+- pandas, numpy
+- matplotlib, seaborn
+- scikit-learn, scipy
 
 ## Author
 Emi Rivera | Data Science Student | George Washington University
